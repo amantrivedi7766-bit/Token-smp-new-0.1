@@ -2,6 +2,7 @@ package com.tokensmp.abilities.impl;
 
 import com.tokensmp.abilities.AbstractAbility;
 import com.tokensmp.tokens.Token;
+import org.bukkit.entity.LivingEntity;   // ✅ ADDED
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
