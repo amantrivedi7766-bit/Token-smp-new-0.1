@@ -26,16 +26,6 @@ jobs:
       - name: Build with Maven
         run: mvn clean package
 
-      - name: Find and rename JAR to TokenSMP.jar
-        run: |
-          jar_file=$(ls target/TokenSMP*.jar | head -n 1)
-          if [ -z "$jar_file" ]; then
-            echo "No JAR found!"
-            exit 1
-          fi
-          echo "Found: $jar_file"
-          mv "$jar_file" target/TokenSMP.jar
-
       - name: Upload JAR artifact
         uses: actions/upload-artifact@v4
         with:
