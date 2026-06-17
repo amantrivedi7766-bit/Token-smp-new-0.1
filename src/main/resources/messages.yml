@@ -1,0 +1,14 @@
+prefix: "&6[TokenSMP] &r"
+no-permission: "&cYou don't have permission to do that."
+player-not-found: "&cPlayer not found."
+token-not-found: "&cToken not found."
+spin:
+  no-tokens: "&cYou have no tokens available to spin."
+  result: "&aYou won the &e{token}&a token!"
+  rare-win: "&6&l★ &e&lRARE WIN! &6&l★"
+upgrade:
+  success: "&aYour token {token} upgraded to level {level}!"
+  fail: "&cUpgrade failed! Materials consumed."
+bounty:
+  set: "&aBounty of ${amount} set on {player}."
+  removed: "&cBounty removed from {player}."
