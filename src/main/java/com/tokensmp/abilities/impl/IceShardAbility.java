@@ -23,7 +23,7 @@ public class IceShardAbility extends AbstractAbility {
         double radius = scaleRadius(2, level);
         Location target = player.getTargetBlock(null, 30).getLocation().add(0.5, 0, 0.5);
         int count = 15 + level * 10;
-        target.getWorld().spawnParticle(Particle.SNOWBALL, target, count, 0.3, 0.3, 0.3);
+        target.getWorld().spawnParticle(Particle.SNOWFLAKE, target, count, 0.3, 0.3, 0.3); // ✅ changed from SNOWBALL
         target.getWorld().playSound(target, Sound.BLOCK_GLASS_BREAK, 0.8f, 1.5f - (level-1)*0.1f);
         target.getWorld().getNearbyEntities(target, radius, radius, radius,
                 e -> e instanceof LivingEntity && e != player)
