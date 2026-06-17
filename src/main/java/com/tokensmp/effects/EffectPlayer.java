@@ -10,7 +10,7 @@ public class EffectPlayer {
 
     public static void playChargeEffect(Player player) {
         Location loc = player.getLocation();
-        player.getWorld().spawnParticle(Particle.ENCHANTMENT_TABLE, loc, 20, 0.5, 1, 0.5);
+        player.getWorld().spawnParticle(Particle.ENCHANT, loc, 20, 0.5, 1, 0.5);
         player.playSound(loc, Sound.BLOCK_NOTE_BLOCK_BELL, 1.0f, 0.5f);
     }
 
@@ -21,12 +21,12 @@ public class EffectPlayer {
     }
 
     public static void playImpactEffect(Player player, Location target) {
-        target.getWorld().spawnParticle(Particle.EXPLOSION_NORMAL, target, 10, 0.5, 0.5, 0.5);
+        target.getWorld().spawnParticle(Particle.EXPLOSION, target, 10, 0.5, 0.5, 0.5);
         target.getWorld().playSound(target, Sound.ENTITY_GENERIC_EXPLODE, 0.8f, 1.0f);
     }
 
     public static void spawnCelebration(Location loc) {
-        loc.getWorld().spawnParticle(Particle.FIREWORKS_SPARK, loc, 50, 0.5, 0.5, 0.5);
+        loc.getWorld().spawnParticle(Particle.FIREWORK, loc, 50, 0.5, 0.5, 0.5);
         loc.getWorld().playSound(loc, Sound.ENTITY_FIREWORK_ROCKET_LAUNCH, 1.0f, 1.0f);
     }
 
