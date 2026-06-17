@@ -1,0 +1,29 @@
+# General plugin settings
+database:
+  type: sqlite
+  file: tokensmp.db
+
+spin:
+  duration: 5.0          # seconds
+  speed-decrease: 0.96   # multiplier per tick
+  rare-celebration: true
+
+upgrade:
+  max-level: 10
+  success-rate: 0.7
+  materials:
+    DIAMOND: 5
+    NETHERITE_INGOT: 2
+    EMERALD: 10
+    CUSTOM_SHARD: 1
+
+cooldown:
+  bossbar-color: BLUE
+  actionbar-update-interval: 10  # ticks
+
+bounty:
+  min-amount: 100
+  max-amount: 10000
+  tax: 0.1
+
+particle-limit: 50   # max particles per ability use
