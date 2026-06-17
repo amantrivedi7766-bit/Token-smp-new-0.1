@@ -42,7 +42,6 @@ public class TokenGUI implements Listener {
                     .build();
             inv.setItem(slot++, item);
         }
-        // Fill rest with glass
         player.openInventory(inv);
     }
 
