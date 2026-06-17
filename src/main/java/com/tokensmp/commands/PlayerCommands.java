@@ -43,7 +43,7 @@ public class PlayerCommands implements CommandExecutor {
                 player.sendMessage(MessageUtil.color("&7Rarity: " + token.getRarity().getColor()));
                 player.sendMessage(MessageUtil.color("&7Abilities:"));
                 token.getAbilities().forEach(a -> 
-                    player.sendMessage(MessageUtil.color("&8- &f" + a.getName() + " &7(" + a.getCooldownSeconds() + "s)"))
+                    player.sendMessage(MessageUtil.color("&8- &f" + a.getName() + " &7(" + a.getBaseCooldown() + "s)"))
                 );
                 break;
             case "upgrade":
