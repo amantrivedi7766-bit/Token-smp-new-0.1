@@ -21,7 +21,7 @@ public class MeteorStrikeAbility extends AbstractAbility {
         double radius = scaleRadius(4, level);
         Location target = player.getTargetBlock(null, 50).getLocation().add(0.5, 0, 0.5);
         target.getWorld().createExplosion(target, explosionPower, true, true);
-        target.getWorld().spawnParticle(Particle.EXPLOSION_LARGE, target, 5 + level*3);
+        target.getWorld().spawnParticle(Particle.EXPLOSION, target, 5 + level*3); // ✅ changed from EXPLOSION_LARGE
         target.getWorld().playSound(target, Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 0.7f - (level-1)*0.05f);
         target.getWorld().getNearbyEntities(target, radius, radius, radius,
                 e -> e instanceof LivingEntity && e != player)
