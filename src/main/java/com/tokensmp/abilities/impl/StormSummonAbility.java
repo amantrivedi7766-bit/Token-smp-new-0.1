@@ -24,6 +24,6 @@ public class StormSummonAbility extends AbstractAbility {
             player.getWorld().strikeLightningEffect(loc);
         }
         player.getWorld().spawnParticle(Particle.CLOUD, center, 30 + level*10, 5, 2, 5);
-        player.getWorld().playSound(center, Sound.AMBIENT_WEATHER_THUNDER, 1.0f, 0.5f - (level-1)*0.05f);
+        player.getWorld().playSound(center, Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1.0f, 0.5f - (level-1)*0.05f);
     }
 }
