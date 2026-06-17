@@ -26,7 +26,6 @@ public class DataManager {
         }
         FileConfiguration config = YamlConfiguration.loadConfiguration(file);
         PlayerData data = new PlayerData(uuid);
-        // load tokens
         if (config.contains("tokens")) {
             for (String key : config.getConfigurationSection("tokens").getKeys(false)) {
                 Token token = Token.fromId(key);
@@ -52,7 +51,6 @@ public class DataManager {
         PlayerData data = plugin.getTokenManager().getPlayerData(uuid);
         File file = new File(dataFolder, uuid.toString() + ".yml");
         FileConfiguration config = new YamlConfiguration();
-        // save tokens
         data.getTokens().forEach((token, amount) -> config.set("tokens." + token.getId(), amount));
         data.getTokenLevels().forEach((token, level) -> config.set("levels." + token.getId(), level));
         try {
@@ -63,7 +61,6 @@ public class DataManager {
     }
 
     public void saveAll() {
-        // save all loaded players
         plugin.getTokenManager().getPlayerDataMap().keySet().forEach(this::savePlayerData);
     }
 }
