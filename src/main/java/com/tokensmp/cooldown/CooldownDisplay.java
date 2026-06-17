@@ -11,7 +11,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class CooldownDisplay {
-
     private final TokenSMP plugin;
     private final Player player;
     private final Token token;
