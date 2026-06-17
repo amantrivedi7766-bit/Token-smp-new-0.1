@@ -1,0 +1,55 @@
+# Defines each token's display name, rarity, model data, and abilities (referenced by id)
+tokens:
+  lightning:
+    display: "&eLightning"
+    rarity: EPIC
+    model-data: 1001
+    abilities: [lightning_strike, chain_reaction, storm_summon]
+  timewarp:
+    display: "&bTime Warp"
+    rarity: RARE
+    model-data: 1002
+    abilities: [time_warp, temporal_slow, rewind]
+  gravity:
+    display: "&5Gravity"
+    rarity: UNCOMMON
+    model-data: 1003
+    abilities: [gravity_pulse, black_hole, float]
+  invisibility:
+    display: "&8Invisibility"
+    rarity: RARE
+    model-data: 1004
+    abilities: [invisibility_field, shadow_step, cloak]
+  lifedrain:
+    display: "&cLife Drain"
+    rarity: UNCOMMON
+    model-data: 1005
+    abilities: [life_drain, soul_steal, vampiric_touch]
+  firestorm:
+    display: "&6Fire Storm"
+    rarity: EPIC
+    model-data: 1006
+    abilities: [fire_storm, flame_aura, meteor_strike]
+  iceshard:
+    display: "&bIce Shard"
+    rarity: COMMON
+    model-data: 1007
+    abilities: [ice_shard, freeze, snow_storm]
+  admin_omni:
+    display: "&c&lOmni"
+    rarity: ADMIN
+    model-data: 2001
+    admin: true
+    abilities: [admin_wipe, global_buff, instant_kill]
+  admin_god:
+    display: "&6&lGod"
+    rarity: ADMIN
+    model-data: 2002
+    admin: true
+    abilities: [god_mode, smite, heal_all]
+  admin_void:
+    display: "&5&lVoid"
+    rarity: ADMIN
+    model-data: 2003
+    admin: true
+    abilities: [void_walk, void_rift, void_annihilation]
