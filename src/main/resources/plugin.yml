@@ -1,0 +1,43 @@
+name: TokenSMP
+version: 1.0.0
+main: com.tokensmp.TokenSMP
+api-version: 1.21
+author: YourName
+description: The ultimate token SMP plugin.
+commands:
+  tokens:
+    description: Opens the token GUI.
+    usage: /tokens
+  tokengui:
+    description: Opens the token GUI.
+    usage: /tokengui
+  tokeninfo:
+    description: Shows info about a token.
+    usage: /tokeninfo <token>
+  upgrade:
+    description: Opens the upgrade GUI.
+    usage: /upgrade
+  bounty:
+    description: Opens the bounty GUI.
+    usage: /bounty
+  spin:
+    description: Opens the spin GUI.
+    usage: /spin
+  tokensmp:
+    description: Admin commands for TokenSMP.
+    usage: /tokensmp <reload|give|remove|reset|admin|cooldownreset>
+    permission: tokensmp.admin
+permissions:
+  tokensmp.admin:
+    description: Allows all admin commands.
+    default: op
+  tokensmp.tokens:
+    default: true
+  tokensmp.tokeninfo:
+    default: true
+  tokensmp.upgrade:
+    default: true
+  tokensmp.bounty:
+    default: true
+  tokensmp.spin:
+    default: true
