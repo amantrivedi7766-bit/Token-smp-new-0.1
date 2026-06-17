@@ -18,7 +18,7 @@ public class GlobalBuffAbility extends AbstractAbility {
         int amp = level - 1;
         player.getWorld().getPlayers().forEach(p -> {
             p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, duration, 1 + amp));
-            p.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, duration, 1 + amp));
+            p.addPotionEffect(new PotionEffect(PotionEffectType.STRENGTH, duration, 1 + amp)); // ✅ changed from INCREASE_DAMAGE
         });
     }
 }
