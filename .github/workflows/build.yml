@@ -3,8 +3,11 @@ name: Build and Release TokenSMP
 on:
   push:
     branches: [ main ]
-  # Allow manual trigger
   workflow_dispatch:
+
+# Grant write permission to create releases
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -24,11 +27,12 @@ jobs:
       - name: Build with Maven
         run: mvn clean package
 
-      - name: Upload JAR as artifact (debug)
+      - name: Upload JAR artifact
         uses: actions/upload-artifact@v4
         with:
           name: TokenSMP
-          path: target/TokenSMP-*.jar
+          # Match any JAR in target (including shaded)
+          path: target/TokenSMP*.jar
 
       - name: Create Release
         id: create_release
@@ -47,6 +51,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: target/TokenSMP-*.jar
+          asset_path: target/TokenSMP*.jar
           asset_name: TokenSMP.jar
           asset_content_type: application/java-archive
