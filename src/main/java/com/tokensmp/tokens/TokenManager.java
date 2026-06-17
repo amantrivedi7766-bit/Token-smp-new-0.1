@@ -13,7 +13,6 @@ public class TokenManager {
 
     public TokenManager(TokenSMP plugin) {
         this.plugin = plugin;
-        // load from database
     }
 
     public void giveToken(Player player, Token token, int amount) {
@@ -35,8 +34,12 @@ public class TokenManager {
         return playerDataMap.computeIfAbsent(uuid, k -> plugin.getDataManager().loadPlayerData(k));
     }
 
+    // --- ADD THIS METHOD ---
+    public Map<UUID, PlayerData> getPlayerDataMap() {
+        return playerDataMap;
+    }
+
     public List<Token> getAvailableSpinTokens(Player player) {
-        // returns non-admin tokens that player does not already own (or all if config allows duplicates)
         List<Token> available = new ArrayList<>();
         for (Token t : Token.values()) {
             if (!t.isAdminOnly()) {
