@@ -1,0 +1,21 @@
+# Cooldowns and descriptions (values can be adjusted)
+abilities:
+  lightning_strike:
+    cooldown: 30
+    description: "Strikes a lightning bolt at your target."
+  chain_reaction:
+    cooldown: 45
+    description: "Lightning chains to nearby mobs."
+  storm_summon:
+    cooldown: 60
+    description: "Summons a thunderstorm around you."
+  time_warp:
+    cooldown: 40
+    description: "Rewinds your position 5 seconds back."
+  temporal_slow:
+    cooldown: 35
+    description: "Slows all mobs in a radius."
+  rewind:
+    cooldown: 50
+    description: "Resets your health and hunger to 5 seconds ago."
+  # ... continue for all 30, but we'll rely on hardcoded defaults in code
