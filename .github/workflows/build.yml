@@ -1,11 +1,9 @@
-name: Build TokenSMP
+name: Build and Release TokenSMP
 
 on:
   push:
-    branches: [ main, dev ]
-  pull_request:
     branches: [ main ]
-  # Optionally allow manual trigger
+  # Allow manual trigger
   workflow_dispatch:
 
 jobs:
@@ -26,8 +24,29 @@ jobs:
       - name: Build with Maven
         run: mvn clean package
 
-      - name: Upload JAR artifact
+      - name: Upload JAR as artifact (debug)
         uses: actions/upload-artifact@v4
         with:
           name: TokenSMP
           path: target/TokenSMP-*.jar
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ github.run_number }}
+          release_name: Build ${{ github.run_number }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: target/TokenSMP-*.jar
+          asset_name: TokenSMP.jar
+          asset_content_type: application/java-archive
