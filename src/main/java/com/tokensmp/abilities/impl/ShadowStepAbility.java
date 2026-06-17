@@ -20,7 +20,7 @@ public class ShadowStepAbility extends AbstractAbility {
         Location behind = target.clone().add(player.getLocation().getDirection().multiply(-distance));
         player.teleport(behind);
         int count = 15 + level * 10;
-        player.getWorld().spawnParticle(Particle.SMOKE_LARGE, behind, count, 0.3, 0.3, 0.3);
+        player.getWorld().spawnParticle(Particle.SMOKE, behind, count, 0.3, 0.3, 0.3); // ✅ changed from SMOKE_LARGE
         player.playSound(behind, Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 0.8f + (level-1)*0.1f);
     }
 }
