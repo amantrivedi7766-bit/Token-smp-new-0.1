@@ -31,7 +31,6 @@ public class PlayerData {
         tokenLevels.put(token, level);
     }
 
-    // getters and setters
     public Map<Token, Integer> getTokens() { return tokens; }
     public Map<Token, Integer> getTokenLevels() { return tokenLevels; }
     public long getLastSpinTime() { return lastSpinTime; }
