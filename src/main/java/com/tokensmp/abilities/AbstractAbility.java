@@ -26,17 +26,16 @@ public abstract class AbstractAbility implements Ability {
     @Override
     public int getBaseCooldown() { return baseCooldown; }
 
-    // Scaling helpers
     protected int scaleDamage(int base, int level) {
-        return base + (level - 1) * 2;  // +2 per level
+        return base + (level - 1) * 2;
     }
 
     protected double scaleRadius(double base, int level) {
-        return base + (level - 1) * 1.0; // +1 block per level
+        return base + (level - 1) * 1.0;
     }
 
     protected int scaleDuration(int baseTicks, int level) {
-        return baseTicks + (level - 1) * 20; // +1 second per level
+        return baseTicks + (level - 1) * 20;
     }
 
     @Override
