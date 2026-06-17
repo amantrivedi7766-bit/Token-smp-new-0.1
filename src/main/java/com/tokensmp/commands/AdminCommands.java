@@ -1,3 +1,4 @@
+
 package com.tokensmp.commands;
 
 import com.tokensmp.TokenSMP;
@@ -55,10 +56,11 @@ public class AdminCommands implements CommandExecutor {
                 sender.sendMessage(MessageUtil.color("&aGiven " + amount + " " + token.getDisplayName() + " to " + target.getName()));
                 break;
             case "remove":
-                // similar
+                // implement similarly
+                sender.sendMessage("Not implemented yet.");
                 break;
             case "reset":
-                // similar
+                sender.sendMessage("Not implemented yet.");
                 break;
             case "admin":
                 if (sender instanceof Player) {
@@ -68,7 +70,7 @@ public class AdminCommands implements CommandExecutor {
                 }
                 break;
             case "cooldownreset":
-                // similar
+                sender.sendMessage("Not implemented yet.");
                 break;
             default:
                 sender.sendMessage("Unknown subcommand.");
